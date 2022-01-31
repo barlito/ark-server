@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  server:
+    restart: always
+    container_name: ark_server
+    image: hermsi/ark-server:latest
+    volumes:
+      - ./ark-server:/app
+      - ./ark-server-backups:/home/steam/ARK-Backups
+      - ./config/GameUserSettings.ini:/app/server/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini
+      - ./config/Game.ini:/app/server/ShooterGame/Saved/Config/LinuxServer/Game.ini
+      - ./config/crontab:/app/crontab
+    environment:
+      - SESSION_NAME=Youl Dinos
+      - SERVER_MAP=LostIsland
+      - SERVER_PASSWORD=veliveli
+      - ADMIN_PASSWORD=veli123
+      - MAX_PLAYERS=10
+      - UPDATE_ON_START=true
+      - BACKUP_ON_STOP=true
+      - PRE_UPDATE_BACKUP=true
+      - WARN_ON_STOP=true
+    ports:
+      - "7777:7777/udp"
+      - "7778:7778/udp"
+#      - "27020:27020/tcp"
+      - "27015:27015/udp"
+    networks:
+      - default

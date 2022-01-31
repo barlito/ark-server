@@ -1,0 +1,2 @@
+0 0 * * * arkmanager update --warn --update-mods
+0 0 * * * arkmanager backup
