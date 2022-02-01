@@ -23,7 +23,7 @@ jobs:
           cd ~/games/ark-server
           git checkout 2022_session
           git pull origin 2022_session
-          make restart
+          make restart-server
 
     - name: Discord notification
       env:

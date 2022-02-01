@@ -16,10 +16,14 @@ deploy:
 undeploy:
 	docker-compose down
 
-.Phone: restart
+.PHONY: restart
 restart:
 	make undeploy
 	make deploy
+
+.PHONY: restart-server
+restart-server:
+	docker exec ark_server arkmanager restart
 
 .PHONY: logs
 logs:
