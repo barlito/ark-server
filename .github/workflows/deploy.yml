@@ -21,6 +21,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd ~/games/ark-server
-          git checkout master
+          git checkout 2022_session
           git pull origin 2022_session
           make restart
