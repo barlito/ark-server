@@ -1,4 +1,4 @@
-stack_name=ark-server
+stack_name=ark_server
 
 app_container_id = $(shell docker ps --filter name="$(stack_name)" -q)
 
