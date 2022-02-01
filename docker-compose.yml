@@ -18,7 +18,7 @@ services:
       - ADMIN_PASSWORD=veli123
       - MAX_PLAYERS=10
       - BACKUP_ON_STOP=true
-      - GAME_MOD_IDS="1967741708,761535755,821530042"
+      - GAME_MOD_IDS="1967741708,821530042,2592287899"
       - DISABLE_BATTLEYE=true
     ports:
       - "7777:7777/udp"
