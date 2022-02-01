@@ -1,11 +1,9 @@
 name: Deploy
 
-# on:
-#   push:
-#     branches: [ master ]
-    
-on: push
-    
+ on:
+   push:
+     branches: [ master ]
+
 jobs:
   deploy:
 
@@ -22,5 +20,7 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          whoami
-          ls -al
+          cd ~/games/ark-server
+          git checkout master
+          git pull origin master
+          make restart
