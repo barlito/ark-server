@@ -17,10 +17,7 @@ services:
       - SERVER_PASSWORD=veliveli
       - ADMIN_PASSWORD=veli123
       - MAX_PLAYERS=10
-      - UPDATE_ON_START=true
       - BACKUP_ON_STOP=true
-      - PRE_UPDATE_BACKUP=true
-      - WARN_ON_STOP=true
     ports:
       - "7777:7777/udp"
       - "7778:7778/udp"
