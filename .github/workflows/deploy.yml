@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ 2022_session ]
 
 jobs:
   deploy:
@@ -22,5 +22,5 @@ jobs:
         script: |
           cd ~/games/ark-server
           git checkout master
-          git pull origin master
+          git pull origin 2022_session
           make restart
