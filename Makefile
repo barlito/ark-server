@@ -26,7 +26,7 @@ restart-server:
 	docker exec ark_server arkmanager restart
 
 .PHONY: update-server
-restart-server:
+update-server:
 	docker exec ark_server arkmanager update --update-mods --backup --warn 
 
 .PHONY: logs
