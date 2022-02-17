@@ -1,7 +1,9 @@
 name: Restart server
 
-on: [workflow_dispatch]
-
+on:
+  schedule:
+    - cron: '0 6 * * *'
+    
 jobs:
   restart-server:
     runs-on: ubuntu-latest
