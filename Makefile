@@ -25,6 +25,10 @@ restart:
 restart-server:
 	docker exec ark_server arkmanager restart
 
+.PHONY: update-server
+update-server:
+	docker exec ark_server arkmanager update --update-mods --backup --warn 
+
 .PHONY: logs
 logs:
 	docker-compose logs -f
