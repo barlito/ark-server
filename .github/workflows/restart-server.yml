@@ -1,9 +1,9 @@
-name: Restart container
+name: Restart server
 
 on: [workflow_dispatch]
 
 jobs:
-  update:
+  restart-server:
     runs-on: ubuntu-latest
 
     steps:
