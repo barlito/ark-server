@@ -10,6 +10,7 @@ services:
       - ./ark-server-backups:/home/steam/ARK-Backups
       - ./config/GameUserSettings.ini:/app/server/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini
       - ./config/Game.ini:/app/server/ShooterGame/Saved/Config/LinuxServer/Game.ini
+      - ./config/arkmanager.cfg:/app/arkmanager/arkmanager.cfg
     environment:
       - SESSION_NAME=Youl Dinos
       - SERVER_MAP=LostIsland
